@@ -1,6 +1,6 @@
-function Decision({title, id, onClick}) {
+function Decision({label, id, onClick}) {
   return (
-        <li onClick={() => onClick(id)}>{title}</li>
+        <li onClick={() => onClick(id)}>{label}</li>
   );
 }
 
