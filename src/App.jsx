@@ -49,9 +49,13 @@ function App() {
             label={label}
             onClick={handleClick}
           />
+
           );
         })}
       </ul>
+      {selectedId.OptionA && selectedId.OptionB && (
+        <button>Compare</button>
+      )}
     </div>
   );
 }
