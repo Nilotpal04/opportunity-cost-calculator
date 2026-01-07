@@ -9,6 +9,10 @@ function App() {
     OptionB: "",
   });
 
+  function onCompare(){
+    console.log("Compare button clicked")
+  }
+
   function handleClick(id) {
     setSelectedId((preValue) => {
       if (preValue.OptionA === "") {
