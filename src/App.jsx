@@ -9,9 +9,14 @@ function App() {
     OptionB: "",
   });
 
-  function onCompare(){
-    console.log("Compare button clicked")
+  const optionATitle = decisions.find(d => d.id === selectedId.OptionA)?.title;
+  const optionBTitle = decisions.find(d => d.id === selectedId.OptionB)?.title;
+
+  function onCompare() {
+    console.log("Compare button clicked");
   }
+
+  const [isClicked, setIsClicked] = useState(false);
 
   function handleClick(id) {
     setSelectedId((preValue) => {
@@ -46,19 +51,24 @@ function App() {
             label = item.title;
           }
           return (
-          <Decision
-            key={item.id}
-            title={item.title}
-            id={item.id}
-            label={label}
-            onClick={handleClick}
-          />
-
+            <Decision
+              key={item.id}
+              title={item.title}
+              id={item.id}
+              label={label}
+              onClick={handleClick}
+            />
           );
         })}
       </ul>
       {selectedId.OptionA && selectedId.OptionB && (
-        <button>Compare</button>
+        <button onClick={() => setIsClicked(true)}>Compare</button>
+      )}
+      {isClicked && (
+        <div>
+          <p>Option A : {optionATitle}</p>
+          <p>Option B : {optionBTitle}</p>
+        </div>
       )}
     </div>
   );
