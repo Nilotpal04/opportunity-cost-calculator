@@ -1,16 +1,70 @@
-# React + Vite
+# Opportunity Cost Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project explores how people make decisions by comparing trade-offs instead of chasing “best” answers.
 
-Currently, two official plugins are available:
+Rather than producing a single score or recommendation, the app focuses on **opportunity cost** — what you give up when you choose one option over another.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Current Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Select two options (Option A and Option B)
+- Compare them across key dimensions:
+  - Time
+  - Risk
+  - Long-term Payoff
+  - Flexibility
+- Simple decision logic based on:
+  - Payoff priority
+  - Risk as a tie-breaker
+  - Time consideration
+- Clear explanation of:
+  - Which option wins
+  - Why it wins
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Philosophy
+
+Most decision tools try to tell you *what is better*.
+
+This project instead asks:
+- What do you gain?
+- What do you sacrifice?
+- What trade-offs matter **to you**?
+
+There are no “correct” answers — only informed perspectives.
+
+---
+
+## Tech Stack
+
+- React (Vite)
+- JavaScript
+- Basic CSS
+
+---
+
+## Roadmap (Planned Improvements)
+
+This project is intentionally built step-by-step while learning React.
+
+Planned additions include:
+- Cleaner UI and refined comparison layout
+- More detailed and customizable trade-off dimensions
+- Better explanation language for decisions
+- Ability to reset and compare again
+- AI-assisted reasoning (to challenge assumptions, not replace thinking)
+- User-specific priority weighting
+
+---
+
+## Status
+
+This project is **actively evolving**.  
+Commits reflect incremental learning and experimentation.
+
+---
+
+Built by Nilotpal
+Exploring decision-making, opportunity cost, and thoughtful software design.
