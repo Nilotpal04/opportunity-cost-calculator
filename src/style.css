@@ -44,3 +44,27 @@ li:hover {
   background: #f3f4f6;
   transform: translateY(-1px);
 }
+
+.compare-table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.compare-table th {
+  background-color: #222;
+  color: #fff;
+}
+
+.compare-table td:first-child {
+  font-weight: bold;
+  text-align: left;
+}
