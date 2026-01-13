@@ -133,37 +133,53 @@ function App() {
         </button>
       )}
       {isClicked && (
-        <table className="compare-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>{optionATitle}</th>
-              <th>{optionBTitle}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Time</td>
-              <td>{optionATime}</td>
-              <td>{optionBTime}</td>
-            </tr>
-            <tr>
-              <td>Risk</td>
-              <td>{optionARisk}</td>
-              <td>{optionBRisk}</td>
-            </tr>
-            <tr>
-              <td>Payoff</td>
-              <td>{optionAPayoff}</td>
-              <td>{optionBPayoff}</td>
-            </tr>
-            <tr>
-              <td>Flexibility</td>
-              <td>{optionAFlex}</td>
-              <td>{optionBFlex}</td>
-            </tr>
-          </tbody>
-        </table>
+        <>
+          <table className="compare-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>{optionATitle}</th>
+                <th>{optionBTitle}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Time</td>
+                <td>{optionATime}</td>
+                <td>{optionBTime}</td>
+              </tr>
+              <tr>
+                <td>Risk</td>
+                <td>{optionARisk}</td>
+                <td>{optionBRisk}</td>
+              </tr>
+              <tr>
+                <td>Payoff</td>
+                <td>{optionAPayoff}</td>
+                <td>{optionBPayoff}</td>
+              </tr>
+              <tr>
+                <td>Flexibility</td>
+                <td>{optionAFlex}</td>
+                <td>{optionBFlex}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          {result && (
+            <div>
+              <h3>
+                Winner:{" "}
+                {result.winner === "A"
+                  ? optionATitle
+                  : result.winner === "B"
+                  ? optionBTitle
+                  : "Tie"}
+              </h3>
+              <p>Reason: {result.reason}</p>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
